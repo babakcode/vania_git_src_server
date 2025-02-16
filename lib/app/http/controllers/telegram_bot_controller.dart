@@ -27,41 +27,39 @@ class TelegramBotController extends Controller {
 
           final telegramInitData = req.input('initData');
 
-          final Map<String, String> initData = {
-               ...Uri(query: telegramInitData).queryParameters
-          };
+          var initData = Uri(query: telegramInitData);
+          var hashValue = initData.queryParameters['hash'];
+          initData = initData.replace(queryParameters: {}); // Remove 'hash' parameter
 
-          final hash = initData['hash'];
-          initData.remove('hash');
+          var dataToCheck = initData.queryParameters.entries
+              .map((entry) => '${entry.key}=${Uri.decodeComponent(entry.value)}')
+              .toList();
+          dataToCheck.sort();
+          var dataToCheckString = dataToCheck.join('\n');
 
-          final dataToCheck = initData.entries
-              .map((entry) => '${entry.key}=${entry.value}')
-              .toList()
-              .join('\n');
-
-          final secretKey = Hmac(sha256, utf8.encode('WebAppData'))
-              .convert(utf8.encode(env('BOT_TOKEN')));
-          final computedHash = Hmac(sha256, secretKey.bytes)
-              .convert(utf8.encode(dataToCheck))
+          var secretKey = Hmac(sha256, utf8.encode('WebAppData'))
+              .convert(utf8.encode(env('BOT_TOKEN')))
+              .bytes;
+          var computedHash = Hmac(sha256, secretKey)
+              .convert(utf8.encode(dataToCheckString))
               .toString();
 
-          print('Data to check: $dataToCheck');
+          print('Data to check: $dataToCheckString');
           print('Computed hash: $computedHash');
-          print('Provided hash: $hash');
+          print('Provided hash: $hashValue');
 
-
-          if(computedHash == hash){
+          if(computedHash == hashValue){
 
                /// user => database
                /// generate key
                ///
                return Response.json({
-                    'success': computedHash == hash,
+                    'success': computedHash == hashValue,
                     'token': 'naoiwnduanduwandawndoiwajnfiueabf'
                });
           }
           return Response.json({
-               'success': computedHash == hash
+               'success': computedHash == hashValue
           });
      }
 
