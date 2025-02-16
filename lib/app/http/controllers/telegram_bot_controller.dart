@@ -27,8 +27,8 @@ class TelegramBotController extends Controller {
 
           final telegramInitData = req.input('initData');
 
-          print('initData: $telegramInitData\n');
-          var initData = Uri.parse('https://babakcode.com?$telegramInitData');
+          print('initData: ${Uri.decodeComponent(telegramInitData)}\n');
+          var initData = Uri.parse('https://babakcode.com?${Uri.decodeComponent(telegramInitData)}');
           var hashValue = initData.queryParameters['hash'];
           initData = initData.replace(queryParameters: {}); // Remove 'hash' parameter
 
