@@ -4,6 +4,8 @@ services:
     image: vania/git_src_bot:latest
     container_name: git_src_bot
     restart: always
+    networks:
+      - nginx-network
     volumes:
       - app:/app
       - ./public:/public
@@ -13,3 +15,7 @@ services:
 
 volumes:
   app:
+
+networks:
+  nginx-network:
+    external: true
