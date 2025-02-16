@@ -1,9 +1,14 @@
-
-
-
 # Vania & Flutter Real-time Currency Price Tutorial
 
 This repository contains the source code for a tutorial on building a real-time fiat and cryptocurrency price application using the **Vania Dart framework** for the backend and **Flutter** for the client-side. The application integrates with Telegram's mini-apps to display real-time prices.
+
+## Client-Side Repository
+- **Flutter Telegram Mini App**: [GitHub Repository](https://github.com/babakcode/flutter_telegram_mini_app)
+
+## Screenshot
+![Application Screenshot](PLACEHOLDER_FOR_SCREENSHOT)
+
+![Application Screenshot](PLACEHOLDER_FOR_SCREENSHOT)
 
 ## Tutorial Overview
 In this tutorial, we demonstrate how to:
@@ -25,11 +30,6 @@ You can see the final implementation at:
 ## Tutorial Video
 📺 Watch the full tutorial (Persian language) on YouTube:
 [![Watch the Tutorial](PLACEHOLDER_FOR_SCREENSHOT)](PLACEHOLDER_FOR_YOUTUBE_LINK)
-
-## Screenshot
-![Application Screenshot](PLACEHOLDER_FOR_SCREENSHOT)
-
-![Application Screenshot](PLACEHOLDER_FOR_SCREENSHOT)
 
 ---
 Developed with ❤️ using Vania & Flutter
