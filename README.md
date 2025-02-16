@@ -5,10 +5,13 @@ This repository contains the source code for a tutorial on building a real-time 
 ## Client-Side Repository
 - **Flutter Telegram Mini App**: [GitHub Repository](https://github.com/babakcode/flutter_telegram_mini_app)
 
-## Screenshot
-![Application Screenshot](PLACEHOLDER_FOR_SCREENSHOT)
 
-![Application Screenshot](PLACEHOLDER_FOR_SCREENSHOT)
+## Screenshot
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/21f1f066-31ed-455b-90f0-bc11147a79c4" alt="Application Screenshot" width="65%"/>
+  <img src="https://github.com/user-attachments/assets/d060da71-fdf3-49a6-a248-41c95f9f8a60" alt="Application Screenshot" width="34%"/>
+</div>
 
 ## Tutorial Overview
 In this tutorial, we demonstrate how to:
@@ -29,7 +32,7 @@ You can see the final implementation at:
 
 ## Tutorial Video
 📺 Watch the full tutorial (Persian language) on YouTube:
-[![Watch the Tutorial](PLACEHOLDER_FOR_SCREENSHOT)](PLACEHOLDER_FOR_YOUTUBE_LINK)
+[<img src="https://github.com/user-attachments/assets/80263e72-19be-4b2e-9911-4bd7a208402d" alt="Application Screenshot" width="100%"/>](https://www.youtube.com/@PersianFlutter)
 
 ---
 Developed with ❤️ using Vania & Flutter
