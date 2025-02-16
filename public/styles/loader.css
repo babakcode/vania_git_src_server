@@ -1,10 +1,11 @@
 * {
-padding: 0;
-margin: 0;
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
+
 .bodyBase {
-  background: linear-gradient(to right, #0D0D0D, #1D1E1F, #1B1C1C);
+  background: linear-gradient(to right, #5B0E0E, #7A1B1B, #680C0C);
   height: 100vh;
   min-height: 100%;
   display: flex;
@@ -21,21 +22,21 @@ margin: 0;
 
 .loader::before {
   content: "";
-  background: rgba(255, 255, 255, 0);
+  background: rgba(255, 200, 200, 0);
   backdrop-filter: blur(8px);
   position: absolute;
   width: 140px;
   height: 55px;
   z-index: 20;
   border-radius: 0 0 10px 10px;
-  border: 1px solid rgba(255, 255, 255, 0.274);
+  border: 1px solid rgba(255, 200, 200, 0.274);
   border-top: none;
-  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.082);
+  box-shadow: 0 15px 20px rgba(139, 0, 0, 0.2);
   animation: anim2 2s infinite;
 }
 
 .loader div {
-  background: rgb(228, 228, 228);
+  background: rgb(255, 150, 150);
   border-radius: 50%;
   width: 25px;
   height: 25px;
@@ -47,8 +48,7 @@ margin: 0;
 }
 
 @keyframes anim {
-  0%,
-  100% {
+  0%, 100% {
     transform: translateY(5px);
   }
   50% {
@@ -57,8 +57,7 @@ margin: 0;
 }
 
 @keyframes anim2 {
-  0%,
-  100% {
+  0%, 100% {
     transform: rotate(-10deg);
   }
   50% {
