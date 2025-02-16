@@ -71856,7 +71856,7 @@ A.LJ.prototype={
 aF(){this.b3()
 A.qP(A.cR(0,0,2),new A.aaY(this),t.P)},
 M(a){var s=null
-return A.atM(B.fO,A.np(A.aGe(A.Yc(A.b([new A.qU(A.atG(s,s,new A.v3("assets/logo.png",s,s)),200,200,s),A.jx("Git Source",s,s,A.ay(a).p2.b),A.jx("Loading ...",s,s,s)],t.F),B.be,B.q4,B.ew,20),s,B.az,s,s,B.ax),s,s))},
+return A.atM(B.fO,A.np(A.aGe(A.Yc(A.b([new A.qU(A.atG(s,s,new A.v3("assets/logo/logo.png",s,s)),200,200,s),A.jx("Git Source",s,s,A.ay(a).p2.b),A.jx("Loading ...",s,s,s)],t.F),B.be,B.q4,B.ew,20),s,B.az,s,s,B.ax),s,s))},
 Ab(){var s=0,r=A.P(t.N),q,p,o,n
 var $async$Ab=A.L(function(a,b){if(a===1)return A.M(b,r)
 while(true)switch(s){case 0:n=window
