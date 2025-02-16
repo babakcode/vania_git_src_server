@@ -27,40 +27,41 @@ class TelegramBotController extends Controller {
 
           final telegramInitData = req.input('initData');
 
-          print('initData: ${Uri.decodeComponent(telegramInitData)}\n');
-          var initData = Uri.parse('https://babakcode.com?${Uri.decodeComponent(telegramInitData)}');
-          var hashValue = initData.queryParameters['hash'];
-          initData = initData.replace(queryParameters: {}); // Remove 'hash' parameter
+          final Map<String, String> initData = {
+               ...Uri(query: telegramInitData).queryParameters
+          };
 
-          var dataToCheck = initData.queryParameters.entries
-              .map((entry) => '${entry.key}=${Uri.decodeComponent(entry.value)}')
-              .toList();
-          dataToCheck.sort();
-          var dataToCheckString = dataToCheck.join('\n');
+          final hash = initData['hash'];
+          initData.remove('hash');
 
-          var secretKey = Hmac(sha256, utf8.encode('WebAppData'))
-              .convert(utf8.encode(env('BOT_TOKEN')))
-              .bytes;
-          var computedHash = Hmac(sha256, secretKey)
-              .convert(utf8.encode(dataToCheckString))
+          final dataToCheck = initData.entries
+              .map((entry) => '${entry.key}=${entry.value}')
+              .toList()
+              .join('\n');
+
+          final secretKey = Hmac(sha256, utf8.encode('WebAppData'))
+              .convert(utf8.encode(env('BOT_TOKEN')));
+          final computedHash = Hmac(sha256, secretKey.bytes)
+              .convert(utf8.encode(dataToCheck))
               .toString();
 
-          print('Data to check: $dataToCheckString');
+          print('Data to check: $dataToCheck');
           print('Computed hash: $computedHash');
-          print('Provided hash: $hashValue');
+          print('Provided hash: $hash');
 
-          if(computedHash == hashValue){
+
+          if(computedHash == hash){
 
                /// user => database
                /// generate key
                ///
                return Response.json({
-                    'success': computedHash == hashValue,
+                    'success': computedHash == hash,
                     'token': 'naoiwnduanduwandawndoiwajnfiueabf'
                });
           }
           return Response.json({
-               'success': computedHash == hashValue
+               'success': computedHash == hash
           });
      }
 
