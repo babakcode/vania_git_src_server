@@ -1,0 +1,15 @@
+services:
+  vania:
+    build: .
+    image: vania/git_src_bot:latest
+    container_name: git_src_bot
+    restart: always
+    volumes:
+      - app:/app
+      - ./public:/public
+      - ./storage:/storage
+    ports:
+      - "8000:8000"
+
+volumes:
+  app:
