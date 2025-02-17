@@ -5,7 +5,7 @@
 }
 
 .bodyBase {
-  background: linear-gradient(to right, #5B0E0E, #7A1B1B, #680C0C);
+  background: linear-gradient(to right, #0D0D0D, #1D1E1F, #1B1C1C);
   height: 100vh;
   min-height: 100%;
   display: flex;
