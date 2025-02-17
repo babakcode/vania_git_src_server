@@ -52,7 +52,7 @@ CORSConfig cors = CORSConfig(
   /// Credentials
   /// -------------------------------
   /// Toggle `Access-Control-Allow-Credentials` header.
-  credentials: true,
+  credentials: false,
 
   /// MaxAge
   /// -------------------------------
