@@ -9,7 +9,7 @@ This repository contains the source code for a tutorial on building a real-time 
 ## Screenshot
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/21f1f066-31ed-455b-90f0-bc11147a79c4" alt="Application Screenshot" width="65%"/>
+  <img src="https://github.com/user-attachments/assets/21f1f066-31ed-455b-90f0-bc11147a79c4" alt="Application Screenshot" width="64%"/>
   <img src="https://github.com/user-attachments/assets/d060da71-fdf3-49a6-a248-41c95f9f8a60" alt="Application Screenshot" width="34%"/>
 </div>
 
