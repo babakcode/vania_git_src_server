@@ -1,0 +1,16 @@
+services:
+  nginx:
+    image: nginx:latest
+    container_name: nginx_container
+    networks:
+      - nginx-network
+    volumes:
+      - ./conf.d:/etc/nginx/conf.d
+      - ./html/:/var/html/
+    ports:
+      - "80:80"
+      - "443:443"
+
+networks:
+  nginx-network:
+    external: true
